@@ -38,8 +38,9 @@ def display_recipe_card(dish, df):
         st.markdown(f'<div class="recipe-card">', unsafe_allow_html=True)
         
         # Header with Badge
-        st.markdown(f'<span class="badge">Recipe</span>', unsafe_allow_html=True)
-        st.markdown(f'## {dish}', unsafe_allow_html=True)
+        # st.markdown(f'<span class="badge">Recipe</span>', unsafe_allow_html=True)
+        st.markdown(f'<div class="card-header"><h2 style="margin:0;">{dish}</h2><span class="badge">Recipe</span></div>', unsafe_allow_html=True)
+
         
         col1, col2 = st.columns([1, 1.5], gap="large")
         

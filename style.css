@@ -129,14 +129,29 @@ section[data-testid="stSidebar"] {
 .badge {
     background-color: var(--accent-color);
     color: white;
-    padding: 4px 12px;
+    padding: 4px 14px;
     border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 1rem;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
 }
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+    margin: 0 !important;
+    line-height: 1;
+}
+
 
 .card-content-grid {
     display: flex;
