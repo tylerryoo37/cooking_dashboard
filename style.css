@@ -6,6 +6,20 @@
     --bg-color: #F7F9FB;
     --card-bg: #FFFFFF;
     --text-color: #1A1A1A;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --hover-bg: #f8fbfb;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #82A1A1;
+        --accent-color: #FF8354;
+        --bg-color: #0E1117;
+        --card-bg: #1A1C24;
+        --text-color: #FAFAFA;
+        --border-color: rgba(255, 255, 255, 0.1);
+        --hover-bg: #262730;
+    }
 }
 
 .main {
@@ -13,7 +27,10 @@
     font-family: 'Inter', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Outfit', sans-serif;
     color: var(--primary-color);
 }
@@ -25,26 +42,27 @@ h1, h2, h3 {
     color: white;
     margin-bottom: 2rem;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-card {
     background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     margin-bottom: 2rem;
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .recipe-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
 }
 
 .ingredient-item {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,17 +80,17 @@ h1, h2, h3 {
 }
 
 .instruction-step {
-    background-color: #f8fbfb;
-    padding: 1rem;
-    border-radius: 8px;
+    background-color: var(--hover-bg);
+    padding: 1.2rem;
+    border-radius: 12px;
     margin-bottom: 1rem;
     border-left: 4px solid var(--accent-color);
 }
 
 /* Sidebar Styling */
 section[data-testid="stSidebar"] {
-    background-color: white;
-    border-right: 1px solid #eeeeee;
+    background-color: var(--card-bg);
+    border-right: 1px solid var(--border-color);
 }
 
 .stRadio [data-testid="stWidgetLabel"] {
@@ -92,4 +110,9 @@ section[data-testid="stSidebar"] {
     text-transform: uppercase;
     margin-bottom: 1rem;
     display: inline-block;
+}
+
+/* Ensure Streamlit elements respect our theme */
+.stMarkdown p {
+    color: var(--text-color);
 }
