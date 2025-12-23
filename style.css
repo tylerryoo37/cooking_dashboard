@@ -39,11 +39,17 @@ h4 {
     background: linear-gradient(135deg, #2F4F4F 0%, #1a3030 100%);
     padding: 3rem 2rem;
     border-radius: 20px;
-    color: white;
+    color: white !important;
     margin-bottom: 2rem;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
+.hero-section h1,
+.hero-section p {
+    color: white !important;
+}
+
 
 .recipe-card {
     background-color: var(--card-bg);
