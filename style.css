@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --primary-color: #2F4F4F;
+    --accent-color: #FF6B35;
+    --bg-color: #F7F9FB;
+    --card-bg: #FFFFFF;
+    --text-color: #1A1A1A;
+}
+
+.main {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary-color);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #2F4F4F 0%, #1a3030 100%);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.recipe-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.ingredient-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ingredient-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.ingredient-amount {
+    color: var(--accent-color);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+}
+
+.instruction-step {
+    background-color: #f8fbfb;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+/* Sidebar Styling */
+section[data-testid="stSidebar"] {
+    background-color: white;
+    border-right: 1px solid #eeeeee;
+}
+
+.stRadio [data-testid="stWidgetLabel"] {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Badge Style */
+.badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
